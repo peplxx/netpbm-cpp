@@ -11,3 +11,8 @@ Circles:
 Rectangles:
 
 ![blanck](https://github.com/peplxx/netpbm-cpp/assets/91543105/3e781be1-0605-456f-9160-ddf994b7812b)
+
+# Usage:
+```
+  compiled > image_name.ppm
+```
