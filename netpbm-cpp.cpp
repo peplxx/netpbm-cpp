@@ -4,6 +4,8 @@
 
 using Primitives::Rectangle;
 using Primitives::Circle;
+using Primitives::Line;
+
 
 int main()
 {

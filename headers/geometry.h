@@ -1,6 +1,7 @@
 #pragma once
 #ifndef GEOMETRY_H2D
 #define GEOMETRY_H2D
+#define INF 9999999
 #include <algorithm>
 
 #include "color.h"
@@ -40,6 +41,25 @@ namespace Primitives {
 			}
 			bool function(Pixel& pixel) {
 				return pixel.squared_magnitude(center) <= radius*radius;
+			}
+	};
+
+	class Line : public Figure {
+		public:
+			double a, b, c;
+			double thickness;
+			Line(double a, double b, double c, double thickness,Color color) {
+				this->a = a;
+				this->b = b;
+				this->c = c;
+				this->thickness = thickness;
+				this->color = color;
+				// Render area is infinite (will bounded only by image size)
+				leftup = Point2(-1,-1);
+				rightdown = Point2(INF, INF);
+			}
+			bool function(Pixel& pixel) {
+				return std::abs(pixel.x * a + pixel.y * b + c) / sqrt(a * a + b * b) <= thickness;
 			}
 	};
 }
