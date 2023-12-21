@@ -36,7 +36,8 @@ public:
 	}
 
 	void drawFigure(Primitives::Figure& figure) {
-		Point2 leftup = figure.leftup, rightdown = figure.rightdown;
+		Point2 leftup = Point2(std::max(0,figure.leftup.x),std::max(0,figure.leftup.y)), 
+			rightdown = Point2(std::min(height-1, figure.rightdown.x), std::min(width-1, figure.rightdown.y));
 		Color color = figure.color;
 		for (int i = leftup.x; i <= rightdown.x; i++) 
 			for (int j = leftup.y; j <= rightdown.y; j++) {

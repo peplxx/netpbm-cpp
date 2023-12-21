@@ -1,5 +1,5 @@
-#include "../geometry.h"
-#include "../image.h"
+#include "../headers/geometry.h"
+#include "../headers/image.h"
 
 using Primitives::Rectangle;
 using Primitives::Circle;

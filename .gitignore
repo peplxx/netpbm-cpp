@@ -33,5 +33,16 @@
 
 # Images
 *.ppm
-netpbm-cpp.vcxproj
+
+# Renders
+FinalRenders
+
+# x64
+x64
+
+# Vsxproj
+*.vsxproj
+*.vsxproj.*
 netpbm-cpp.vcxproj.filters
+netpbm-cpp.vcxproj.user
+netpbm-cpp.vcxproj

@@ -8,14 +8,15 @@
 # define GREEN Color(0,190,0)
 
 #include <iostream>
+#include <cmath>
 
 class Color {
 public:
 	int r, g, b;
 	Color(int r, int g, int b) {
-		this->r = r;
-		this->b = b;
-		this->g = g;
+		this->r = std::max(r,0);
+		this->b = std::max(b, 0);
+		this->g = std::max(g, 0);
 	}
 	Color() {
 		this->r = 0;
